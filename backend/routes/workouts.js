@@ -3,6 +3,8 @@ const {
   createWorkout,
   getWorkouts,
   getWorkout,
+  deleteWorkout,
+  updateWorkout,
 } = require("../controllers/workoutController");
 
 const Workout = require("../models/workoutModel");
@@ -41,13 +43,15 @@ router.post("/", createWorkout);
 // });
 
 // DELETE A WORKOUT
-router.delete("/:id", (req, res) => {
-  res.json({ mssg: "DELETE A NEW WORKOUT" });
-});
+router.delete("/:id", deleteWorkout);
+// router.delete("/:id", (req, res) => {
+//   res.json({ mssg: "DELETE A NEW WORKOUT" });
+// });
 
 //UPDATE A WORKOUT
-router.patch("/:id", (req, res) => {
-  res.json({ mssg: "UPDATE A WORKOUT" });
-});
+router.patch("/:id", updateWorkout);
+// router.patch("/:id", (req, res) => {
+//   res.json({ mssg: "UPDATE A WORKOUT" });
+// });
 
 module.exports = router;
