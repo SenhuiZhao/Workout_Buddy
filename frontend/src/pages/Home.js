@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // components
 import WorkoutDetails from "../components/WorkoutDetails";
